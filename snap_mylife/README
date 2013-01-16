@@ -1,0 +1,57 @@
+Code Review Exercise
+================================================================
+Perform a code review of the following code and refactor it in
+order to improve its:
+a. Readability
+b. Maintainability
+c. Simplicity
+
+boolean f(boolean A, boolean B, boolean C, boolean D, boolean E)
+{
+	if (A)
+	{
+		k();
+		if (B)
+		{
+			m();
+			if (C)
+			{
+				n();
+				if (D)
+				{
+					p();
+					if (E)
+					{
+						q();
+						return true;
+					}
+					else
+					{
+						r();
+						return false;
+					}
+				}
+				else
+				{
+					s();
+					return false;
+				}
+			}
+			else
+			{
+				t();
+				return false;
+			}
+		}
+		else
+		{
+			v();
+			return false;
+		}
+	}
+	else
+	{
+		w();
+		return false;
+	}
+}

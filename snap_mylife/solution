@@ -1,0 +1,19 @@
+boolean f(boolean A, boolean B, boolean C, boolean D, boolean E)
+{
+    if (A) k();
+    else w();
+
+    if (A && B) m();
+    else if (A && !B) v();
+
+    if (A && B && C) n();
+    else if (A && B && !C) t();
+
+    if (A && B && C && D) p();
+    else if (A && B && C && !D) s();
+
+    if (A && B && C && D && E) q();
+    else if (A && B && C && D && E) r();
+
+    return (A && B && C && D && E);
+}
