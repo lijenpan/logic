@@ -215,7 +215,7 @@ if __name__ == '__main__':
 
 Result
 -------
-**I win 56.4%**. He wins 43.6%, which shows my algorithm (and easy to read too!) is **optimal**.
+**I win 56.4% (at minimum)**. He wins 43.6% (at maximum), which shows my algorithm (and easy to read too!) is **optimal**. 
 
 Theoretical Stuff
 =====
