@@ -220,3 +220,27 @@ Result
 Theoretical Stuff
 =====
 If you have a strategy that wins more than 50% of the time, your opponent can use the same strategy and also win more than 50% of the time, which is impossible. Therefore, the best possible strategy cannot guarantee winning more than 50% of the time.
+Break It Down
+------
+Stepping through the other player's code, he deploys logic to pick a number that will least likely to lose two points given my responses. Here is the initial set of his probability matrix:
+```
+> [6, 7, 5, 3, 1, -1, -3, -5, -7, -6] ==> He picks 2
+> [4, 7, 7, 2, 0, -2, -4, -6, -8, -7] ==> He picks 2
+> [5, 8, 5, 2, 2, -3, -5, -7, -9, -8] ==> He picks 2
+> [3, 8, 7, 1, 1, -4, -6, -8, -10, -9] ==> He picks 2
+> [1, 8, 9, 0, 0, -5, -7, -9, -11, -10] ==> He picks 2
+```
+
+This is right because until both players reach 3 points I would keep dishing out 2, 3, or 4. So he is very likely to lose two points by picking 1. His problem is he takes how frequently I pick a number into his judgement while I just focus on which set of numbers gives me a point statistically. So usually the matches are very close until when the both player reaches 4 points. His probability matrix becomes:
+> [7, 9, 1, 3, 6, -8, -10, -12, -14, -13] ==> He picks 2
+
+So his algorithm most likely to return 2 or 1. Sometimes 3. And when this happens, his probability matrix starts to crack:
+> [8, 1, 5, 9, -1, -9, -11, -13, -15, -14] ==> He picks 4
+
+If you label his approach as _statistical_ probability, my approach is _pure_ probability meaning I don't care what you picked before. I just focus on the set of numbers that most likely to give me a win.
+
+From programming perspective, his last for-loop that picks his best number can be written as:
+```
+best = expected.index(max(expected))
+```
+Much easier to read, much faster too!
