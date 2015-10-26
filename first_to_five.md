@@ -217,6 +217,13 @@ Result
 -------
 **I win 56.4% (at minimum)**. He wins 43.6% (at maximum), which shows my algorithm (and easy to read too!) is **optimal**. 
 
+[Updated October 26, 2015]
+People at fake python [revealed more "supposed" winners](https://gist.github.com/mjhea0/c21178d0cbf9e364c707).
+Against submission2.py: **I win 57.1%.**
+Against submission3.py: **I win 52.1%.**
+Against submission4.py: **I win 58.2%.**
+Against submission5.py (butt ugly answer and slow as hell): **I win 53.8%.**
+
 Theoretical Stuff
 =====
 If you have a strategy that wins more than 50% of the time, your opponent can use the same strategy and also win more than 50% of the time, which is impossible. Therefore, the best possible strategy cannot guarantee winning more than 50% of the time.
@@ -241,6 +248,6 @@ If you label his approach as _statistical_ probability, my approach is _pure_ pr
 
 From programming perspective, his last for-loop that picks his best number can be written as:
 ```
-best = expected.index(max(expected))
+best = expected.index(max(expected)) + 1
 ```
 Much easier to read, much faster too!
