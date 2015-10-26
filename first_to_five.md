@@ -218,11 +218,13 @@ Result
 **I win 56.4% (at minimum)**. He wins 43.6% (at maximum), which shows my algorithm (and easy to read too!) is **optimal**. 
 
 [Updated October 26, 2015]
-People at fake python [revealed more "supposed" winners](https://gist.github.com/mjhea0/c21178d0cbf9e364c707).
-Against submission2.py: **I win 57.1%.**
-Against submission3.py: **I win 52.1%.**
-Against submission4.py: **I win 58.2%.**
-Against submission5.py (butt ugly answer and slow as hell): **I win 53.8%.**
+People at fake python [revealed more "supposed" winners](https://gist.github.com/mjhea0/c21178d0cbf9e364c707).  It's also interesting to note that submission4.py deploys the same strategy as my v1, which I indicated to [Michael Herman's game runner is flawed and revealed the con artist he really is](https://gist.github.com/mjhea0/0a6b0bb6cc7557776ab8).
+```
+My v2 vs submission2.py: I win 57.1%.
+My v2 vs submission3.py: I win 52.1%.
+My v2 vs submission4.py: I win 58.2%.
+My v2 vs submission5.py (butt ugly answer and slow as hell): I win 53.8%.
+```
 
 Theoretical Stuff
 =====
